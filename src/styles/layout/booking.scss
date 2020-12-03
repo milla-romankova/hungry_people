@@ -1,0 +1,164 @@
+.booking {
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @media(max-width: 1200px) {
+      gap: 3vw;
+    }
+
+    @media(max-width: 950px) {
+      flex-direction: column;
+      margin-left: 0;
+    }
+  }
+
+  &__img {
+    width: 489px;
+    height: 489px;
+    filter: drop-shadow(0 0 46.59px rgba(0, 0, 0, 0.5));
+    border-radius: 5px;
+
+    @media(max-width: 1200px) {
+      width: 300px;
+      height: 300px;
+      margin-top: 60px;
+    }
+
+    @media(max-width: 950px) {
+      display: none;
+    }
+
+    @media(max-width: 750px) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 340px;
+      top: 145px;
+      display: block;
+      width: 210px;
+      height: 210px;
+      border: 19px solid $accent-color;
+      box-sizing: border-box;
+      filter: drop-shadow(0 0 93px rgba(0, 0, 0, 0.5));
+      border-radius: 5px;
+
+      @media(max-width: 1200px) {
+        left: 180px;
+        top: 125px;
+        display: block;
+        width: 170px;
+        height: 170px;
+      }
+
+      @media(max-width: 1000px) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 57px;
+    margin-bottom: 36px;
+    font-family: "Banny", sans-serif;
+    font-size: 34px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+
+    @media(max-width: 950px) {
+      margin-top: 30px;
+    }
+
+    @media(max-width: 750px) {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    &::after {
+      content: "";
+      position: relative;
+      left: calc(50% - 27px);
+      top: 12px;
+      display: block;
+      width: 54px;
+      height: 3px;
+      border: 1px solid transparent;
+      background: $accent-color;
+      border-radius: 46px;
+    }
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: $input-width $input-width;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 9px;
+
+    @media(max-width: 550px) {
+      grid-template-columns: $input-width;
+    }
+  }
+
+  &__input {
+    width: 256px;
+    height: 54px;
+    background: #e5e5e5;
+    color: $input-color;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-indent: 18px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    outline-color: $color-grey;
+    cursor: pointer;
+
+    &::placeholder {
+      color: $color-grey;
+    }
+  }
+
+  &__select {
+    color: $color-grey;
+    border-right: 10px solid #e5e5e5;
+  }
+
+  &__footer {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 93px;
+    text-align: center;
+    color: $color-grey;
+
+    @media(max-width: 750px) {
+      height: 60px;
+      max-width: 220px;
+      line-height: 20px;
+      margin: 0 auto;
+    }
+  }
+
+  &__tel {
+    text-decoration: none;
+    color: $color-grey;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}

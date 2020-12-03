@@ -1,0 +1,51 @@
+.button {
+  display: block;
+  width: $button-width;
+  height: $button-height;
+  background-color: $accent-color;
+  border: 1px solid $accent-color;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: $button-height;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+
+  @media(max-width: 750px) {
+    width: $button-width-sv;
+    height: $button-height-sv;
+    line-height: $button-height-sv;
+  }
+
+  &:hover {
+    background: transparent;
+    border: 1px solid $accent-color;
+    color: $accent-color;
+  }
+
+  &--wide {
+    width: 100%;
+    border: 3px solid $accent-color;
+    transition: background-color 0.5s, color 0.5s;
+
+    &:hover {
+      color: $accent-color;
+      border: 3px solid  $accent-color;
+    }
+
+    @media(max-width: 950px) {
+      width: $input-width;
+      margin: 0 auto;
+    }
+  }
+
+  &--transparent {
+    background: transparent;
+    border: 1px solid $line-color;
+    transition: border-color 0.5s, color 0.5s;
+  }
+}
